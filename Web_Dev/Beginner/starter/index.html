@@ -7,8 +7,106 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Welcome to your Beginner Web Dev Challenge!</h1>
-    <p>Start your project here.</p>
-    <script src="script.js"></script>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+  
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="A portfolio of a university freshman passionate about programming. Showcasing projects and skills in web development and more.">
+<meta name="keywords" content="portfolio, programming, web development, university fresher, projects">
+<meta name="author" content="Your Name">
+
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Welcome</div>
+        <ul class="nav-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#prducts">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="dark-mode-toggle">Dark Mode</button>
+    </nav>
+
+    
+    <section id="hero">
+        <h1>Hello, </h1>
+        <p>Welcome to my website! Dive in to see what I recommend for you.</p>
+    </section>
+
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hi! I'm a sixteen-year-old computer science student who discovered programming a couple of years ago.
+        </p>
+    </section>
+
+  
+    <section id="projects">
+        <h2>Our Products</h2>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project">
+                <h3>Product One</h3>
+                <p>A brief description of your first product. Maybe a cool serum or exfoilator.</p>
+            </div>
+            <!-- Project 2 -->
+            <div class="project">
+                <h3>Product Two</h3>
+                <p>Details about your second product. Highlight what it does or aims to achieve.</p>
+            </div>
+         
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>
+            I'm always excited to connect with fellow enthusiasts, potential collaborators, or anyone interested in my work.
+            Feel free to drop me a message!
+        </p>
+        <ul>
+            <li>Email: <a class="email" href="mailto:ebubechijiokere739@gmail.com">ebubechijioke739@gmail.com</a></li>
+            <li>LinkedIn: <a class="linkedln" href="https://www.linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></li>
+            <li>GitHub: <a href="https://github.com/ebubechijioke739">github.com/ebubechijioke739</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025; Your Name. All rights reserved.</p>
+    </footer>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+    
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script>
+        // Dark Mode Toggle
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+    
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if(body.classList.contains('dark-mode')){
+                toggleButton.textContent = 'Light Mode';
+            } else {
+                toggleButton.textContent = 'Dark Mode';
+            }
+        });
+    </script>
+    
+</body>
+</html>
+    
   </body>
 </html>
